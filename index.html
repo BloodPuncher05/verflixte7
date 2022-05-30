@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js.js"></script>
+    <script src="bot.js"></script>
 </head>
 <body>
     <h>Die verfi**te 7!</h>
-    <p>(K)ein Spaß für die ganze Familie.<br>
-        <br>
-        Würfel 1: <a id="Würfel1"></a><br>
-    Würfel 2: <a id="Würfel2"></a><br>
-        <br>
+    <p>(K)ein Spaß für die ganze Familie.</p><br>
+    <p id="Würfel1">Würfel 1: </p><br>
+    <p id="Würfel2">Würfel 2: </p><br>
+    <p id="Ergebnis"></p>
+    <p id="Ergebnis2"></p>
         <!-- Raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Würfeln!
+        <button id="w1" onclick="wuerfeln()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Würfeln Spieler 1!
         </button>
-        <br>
-    Summe Spieler 1: <a id="Punkte1"></a><br>
-    Anzahl Würfe Spieler 1: <a id="Versuche1"></a><br>
-        <br>
-    Summe Spieler 2:                     <br>
-    Anzahl Würfe Spielr 2:               <br>
-        <br>
+    <!-- Raised button with ripple -->
+    <button id="w2" onclick="wuerfeln2()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Würfeln Spieler 2!
+    </button>
 
-        <!-- Raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    <p id="Punkte1" >Summe Spieler 1: </p><br>
+    <p id="Versuche1">Anzahl Würfe Spieler 1: </p><br>
+    <p id="Punkte2">Summe Spieler 2: </p><br>
+    <p id="Versuche2">Anzahl Würfe Spieler 2: </p><br>
+    <p id="Punktebot"></p><br>
+    <p id="Versuchebot"></p><br>
+
+
+    <!-- Raised button with ripple -->
+        <button onclick="beenden()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Zug beenden
         </button>
         <!-- Raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <button onclick="reset()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Neues Spiel
         </button>
-
-    </p>
-
+    <!-- Raised button with ripple -->
+    <button onclick="wuerfelbot()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Bot ist dran!
+    </button>
 </body>
 </html>
